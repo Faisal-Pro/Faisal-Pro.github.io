@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faisal Ahmed Awad | Data Analysis &amp; Python Portfolio</title>
+<meta name="description" content="Portfolio of Faisal Ahmed Awad, AI graduate focused on data analysis, Python and machine learning.">
+<style>
+:root{--bg:#f6f8fc;--card:#fff;--ink:#121826;--mut:#5b6577;--line:#dde3ee;--acc:#2457c5;--chip:#e8eefb}
+@media (prefers-color-scheme:dark){:root{--bg:#0e131d;--card:#161d2b;--ink:#e8ecf4;--mut:#9aa6bb;--line:#263149;--acc:#6e9bff;--chip:#1d2840}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 28px}
+h1{font-size:clamp(2rem,5vw,2.8rem);margin:0;line-height:1.15}
+.role{color:var(--acc);font-weight:700;margin:6px 0 14px}
+.lead{max-width:640px;color:var(--mut);margin:0 0 20px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:9px 16px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#fff}
+h2{font-size:1.35rem;margin:42px 0 16px}
+.grid{display:grid;gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.card .media{background:#0000000d;border-bottom:1px solid var(--line)}
+.card img,.card video{display:block;width:100%;height:auto}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.thumbs img{aspect-ratio:16/9;object-fit:cover;cursor:zoom-in}
+.body{padding:20px 22px 22px}
+.body h3{margin:0 0 4px;font-size:1.25rem}
+.sub{color:var(--mut);margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+.chips li{background:var(--chip);color:var(--acc);font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:99px}
+.body ul.pts{margin:0 0 16px;padding-left:20px}
+.body ul.pts li{margin:4px 0}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.skills b{display:block;margin-bottom:4px}
+.skills span{color:var(--mut);font-size:.93rem}
+.soon{border-style:dashed;text-align:center;color:var(--mut);padding:26px}
+footer{padding:40px 0 60px;color:var(--mut);font-size:.9rem}
+#lb{position:fixed;inset:0;background:#000d;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out;z-index:9}
+#lb img{max-width:100%;max-height:100%;border-radius:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Faisal Ahmed Awad</h1>
+  <p class="role">AI Graduate | Data Analysis &amp; Python</p>
+  <p class="lead">B.Sc. in Artificial Intelligence, Cairo University (2026). I build data tools end to end: databases, Python applications, machine-learning models and Power BI dashboards.</p>
+  <div class="btns">
+    <a class="btn primary" href="Faisal_Ahmed_Resume.pdf">Download CV</a>
+    <a class="btn" href="https://github.com/Faisal-Pro">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/faisal-ahmed-ai/">LinkedIn</a>
+    <a class="btn" href="mailto:imfaisal1419@gmail.com">Email</a>
+  </div>
+</header>
+
+<h2>Projects</h2>
+<div class="grid" id="projects"></div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <div><b>Data &amp; Analytics</b><span>SQL, SQLite, Power BI, Excel, Pandas, NumPy, Matplotlib, data cleaning</span></div>
+  <div><b>Machine Learning</b><span>scikit-learn, XGBoost, OpenCV, deep learning basics</span></div>
+  <div><b>Programming &amp; Web</b><span>Python, Django, database design, automated testing, JavaScript, Git &amp; GitHub</span></div>
+</div>
+
+<footer>Contact: <a href="mailto:imfaisal1419@gmail.com">imfaisal1419@gmail.com</a> &middot; Cairo, Egypt</footer>
+</div>
+<div id="lb"><img alt=""></div>
+
+<script>
+/* To add a new project later: copy one object below, change the text,
+   put its images in img/ and its video (optional) in video/. */
+const PROJECTS = [
+  {
+    title: "Smart Sales Analytics App",
+    sub: "Desktop app for sales and inventory with a connected Power BI dashboard",
+    tech: ["Python","SQLite","CustomTkinter","Matplotlib","Power BI"],
+    points: [
+      "Stock is deducted in the same transaction as each sale, so items cannot be oversold.",
+      "SQLite schema with foreign keys, check constraints and indexes; cost stored per sale so historical profit stays accurate.",
+      "CSV import with row-level validation, CSV export, and revenue / profit / margin analytics with charts.",
+      "Interactive Power BI dashboard (KPIs, trends, top products and customers, low stock) connected through ODBC."
+    ],
+    hero: "img/sales-powerbi.jpg",
+    images: ["img/sales-app.jpg","img/sales-analytics.jpg","img/sales-powerbi.jpg"],
+    links: [["Source code","https://github.com/Faisal-Pro/Smart_Sales_Analytics_App"]]
+  },
+  {
+    title: "Smart School Management & Academic Risk System",
+    sub: "Django platform for four roles with an AI early-warning model and face login",
+    tech: ["Django","SQLite","XGBoost","OpenCV","Python"],
+    points: [
+      "Admin, teacher, student and parent portals: courses, grades, attendance, quizzes, homework, announcements.",
+      "XGBoost model predicts each student's probability of failing a course (ROC-AUC 0.95, evaluated with a split by student).",
+      "OpenCV (LBPH) face login and attendance with 1:1 verification.",
+      "Team graduation project, extended afterwards by me: access control, security hardening, admin tools, tests and documentation."
+    ],
+    video: "video/school-highlights.mp4",
+    poster: "img/school-admin.jpg",
+    images: ["img/school-student.jpg","img/school-risk.jpg","img/school-admin.jpg"],
+    links: [["Source code","https://github.com/Faisal-Pro/Smart-School-System"]]
+  }
+];
+
+const root = document.getElementById("projects");
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+PROJECTS.forEach(p => {
+  const media = p.video
+    ? `<video controls preload="metadata" poster="${p.poster}"><source src="${p.video}" type="video/mp4"></video>`
+    : `<img src="${p.hero}" alt="${esc(p.title)}" loading="lazy">`;
+  const thumbs = (p.images||[]).map(i => `<img src="${i}" alt="" loading="lazy">`).join("");
+  root.insertAdjacentHTML("beforeend", `
+  <article class="card">
+    <div class="media">${media}</div>
+    <div class="thumbs">${thumbs}</div>
+    <div class="body">
+      <h3>${esc(p.title)}</h3>
+      <p class="sub">${esc(p.sub)}</p>
+      <ul class="chips">${p.tech.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
+      <ul class="pts">${p.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+      <div class="btns">${p.links.map(l=>`<a class="btn" href="${l[1]}">${esc(l[0])}</a>`).join("")}</div>
+    </div>
+  </article>`);
+});
+root.insertAdjacentHTML("beforeend", `<div class="card soon">More projects coming soon.</div>`);
+
+const lb = document.getElementById("lb");
+document.addEventListener("click", e => {
+  if (e.target.closest(".thumbs img")) { lb.firstElementChild.src = e.target.src; lb.style.display = "flex"; }
+  else if (lb.contains(e.target)) lb.style.display = "none";
+});
+</script>
+</body>
+</html>
